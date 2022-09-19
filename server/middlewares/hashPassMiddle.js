@@ -4,10 +4,7 @@ const bcrypt = require('bcrypt');
 
 module.exports = async (req, res, next) => {
   try {
-    req.hashPass = await bcrypt.hash(
-      req.body.password,
-      process.env.SALT_ROUNDS
-    );
+    req.hashPass = await bcrypt.hash(req.body.password, CONSTANTS.HASH_SALT);
     next();
   } catch (err) {
     next(new ServerError('Server Error on hash password'));

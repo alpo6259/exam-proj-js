@@ -1,4 +1,5 @@
 module.exports = {
+  HASH_SALT: 5,
   JWT_SECRET: 'asdasdasd4as5d4as8d7a8sd4as65d4a8sd7asd4as56d4',
   ACCESS_TOKEN_TIME: 60 * 60,
   SQUADHELP_BANK_NUMBER: '4564654564564564',
